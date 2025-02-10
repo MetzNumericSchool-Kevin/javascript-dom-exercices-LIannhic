@@ -76,3 +76,25 @@ nom_potion_02.textContent = "Potion de mana";
 prix_potion_02.textContent = "20";
 description_potion_02.textContent ="Soigne les maux de tête, et c'est tout.";
 element_liste_potions.appendChild(clone_potion_02);
+
+// exercice 06
+
+function ajouter_une_potion_avec_le_formulaire(event) {
+    event.preventDefault();
+    const element_form = document.querySelector(".form");
+    const FormHtmlElement = element_form
+    const formData = new FormData(FormHtmlElement);
+    const element_liste = document.querySelector("#liste_potions");
+    const element_template = document.querySelector("#template_potion");
+    const clone_potion = element_template.content.cloneNode(true);
+    const element_form_nom = formData.get("toto");
+    const element_form_description = formData.get("tata");
+    const element_form_prix = formData.get("titi");
+    clone_potion.querySelector(".nom_potion").textContent = element_form_nom;
+    clone_potion.querySelector(".prix_potion").textContent = element_form_prix;
+    clone_potion.querySelector(".description_potion").textContent = element_form_description;
+    element_liste.appendChild(clone_potion);
+    element_form.reset();
+}
+
+document.querySelector(".form").addEventListener("submit", ajouter_une_potion_avec_le_formulaire);
