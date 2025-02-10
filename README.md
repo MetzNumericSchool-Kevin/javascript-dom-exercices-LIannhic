@@ -1,4 +1,5 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/2An2HWwO)
+
 # Exercices sur les fonctions en JavaScript
 
 - Écris toutes tes réponses dans le fichier `exercices.js`.
@@ -70,11 +71,7 @@ Roger, un collègue sorcier jaloux, a saboté le titre de ta boutique en ajoutan
 
 **Instructions**:
 
-Pour divertir l'Aventurier pendant ton arrivée, il peut jouer avec des boutons magiques qui changent la couleur des boîtes.
-
-- Utilise `querySelectorAll` pour récupérer tous les noeuds HTML des boîtes (classe 'boite') à l'intérieur de la `<div id="boites_magique">`.
-- Récupère chaque bouton de couleur avec `querySelector` (`#btn_change_red`, `#btn_change_blue`, `#btn_change_green`).
-- Pour chaque bouton, attache un écouteur d'événement qui modifiera la propriété `style.backgroundColor` des boîtes appropriées.
+prix
 
 **Résultat attendu**:
 

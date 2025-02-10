@@ -31,7 +31,7 @@ console.log(element_h1.textContent)
 //     alert("`🧙‍♂️ J'arrive, j'arrive Aventurier !`");
 // };
 
-document.querySelector("#call_archibald").addEventListener("click", function(){alert("`🧙‍♂️ J'arrive, j'arrive Aventurier !`")})
+document.querySelector("#call_archibald").addEventListener("click", function(){alert("`🧙‍♂️ J'arrive, j'arrive Aventurier !`")});
 
 
 
@@ -53,3 +53,26 @@ element_button_green.addEventListener("click", function(){
     element_boites[1].style.backgroundColor = "#198754";
     element_boites[2].style.backgroundColor = "#198754";
 });
+
+// exercice 05
+
+document.querySelector("#liste_potions>.card").remove();
+const element_liste_potions = document.querySelector("#liste_potions");
+const element_template_potion = document.querySelector("#template_potion");
+const clone_potion_01 = element_template_potion.content.cloneNode(true);
+const nom_potion_01 = clone_potion_01.querySelector(".nom_potion");
+const prix_potion_01 = clone_potion_01.querySelector(".prix_potion");
+const description_potion_01 = clone_potion_01.querySelector(".description_potion");
+nom_potion_01.textContent = "Potion de soin";
+prix_potion_01.textContent = "10";
+description_potion_01.textContent ="Soigne les contusions, les ampoules, et autres blessures mineurs....";
+element_liste_potions.appendChild(clone_potion_01);
+
+const clone_potion_02 = element_template_potion.content.cloneNode(true);
+const nom_potion_02 = clone_potion_02.querySelector(".nom_potion");
+const prix_potion_02 = clone_potion_02.querySelector(".prix_potion");
+const description_potion_02 = clone_potion_02.querySelector(".description_potion");
+nom_potion_02.textContent = "Potion de mana";
+prix_potion_02.textContent = "20";
+description_potion_02.textContent ="Soigne les maux de tête, et c'est tout.";
+element_liste_potions.appendChild(clone_potion_02);
